@@ -1,0 +1,32 @@
+@-webkit-keyframes AN-ani-12079 { 
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        opacity: 0;
+        -webkit-animation-timing-function: linear;
+    }
+
+    0.01% {
+        -webkit-transform: translate3d(0, 0, 0);
+        opacity: 0;
+        -webkit-animation-timing-function: linear;
+    }
+
+    65.84% {
+        -webkit-transform: translate3d(0, 0, 0);
+        opacity: 1;
+        -webkit-animation-timing-function: linear;
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        opacity: 0;
+        -webkit-animation-timing-function: linear;
+    }
+}
+
+.run #AN-sObj-12063 {
+    -webkit-animation-name: AN-ani-12079;
+    -webkit-animation-duration: 1.113s;
+    -webkit-animation-delay: 0;
+    -webkit-animation-fill-mode: both;
+}

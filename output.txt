@@ -1,0 +1,28 @@
+@-webkit-keyframes AN-ani-12079 {
+    83.407% {
+        -webkit-transform: translate3d(0, 0, 0);
+        opacity: 0;
+        -webkit-animation-timing-function: linear;
+    }
+
+    83.409% {
+        -webkit-transform: translate3d(0, 0, 0);
+        opacity: 0;
+        -webkit-animation-timing-function: linear;
+    }
+
+    94.332% {
+        -webkit-transform: translate3d(0, 0, 0);
+        opacity: 1;
+        -webkit-animation-timing-function: linear;
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        opacity: 0;
+        -webkit-animation-timing-function: linear;
+    }
+}
+
+    -webkit-animation-duration: 1.113s;
+    -webkit-animation-delay: 0;
