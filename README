@@ -1,0 +1,112 @@
+========================================
+NAME: DelayRemover
+AUTHOR: shinriyo
+WEB: http://d.hatena.ne.jp/shinriyo/
+========================================
+
+・概要
+CSS3のdelayが信頼できないので、キーフレームだけで行うためのツールです。
+
+・必須条件
+Python3.xがインストールされていること。
+
+・使用方法
+
+1.input.txtに元となるCSSを記述する
+コード整形に予め、http://procssor.com/のサービスを使用することを推奨。
+例）AN-ani-12079というアニメーションがAN-sObj-12063から呼び出されている場合は
+以下を記述します。(※"==="の行は記述しないこと）
+========================================================
+@-webkit-keyframes AN-ani-12079 { 
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        opacity: 0;
+        -webkit-animation-timing-function: linear;
+    }
+
+    0.01% {
+        -webkit-transform: translate3d(0, 0, 0);
+        opacity: 0;
+        -webkit-animation-timing-function: linear;
+    }
+
+    65.84% {
+        -webkit-transform: translate3d(0, 0, 0);
+        opacity: 1;
+        -webkit-animation-timing-function: linear;
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        opacity: 0;
+        -webkit-animation-timing-function: linear;
+    }
+}
+
+.run #AN-sObj-12063 {
+    -webkit-animation-name: AN-ani-12079;
+    -webkit-animation-duration: 0.18461261261261253s;
+    -webkit-animation-delay: 0.928s;
+    -webkit-animation-fill-mode: both;
+}
+========================================================
+
+2.以下のコマンドを入力する
+
+python delayremover.py
+
+3.output.txtが出来上がる。
+
+=======================================================
+@-webkit-keyframes AN-ani-12079 {
+    83.407% {
+        -webkit-transform: translate3d(0, 0, 0);
+        opacity: 0;
+        -webkit-animation-timing-function: linear;
+    }
+
+    83.409% {
+        -webkit-transform: translate3d(0, 0, 0);
+        opacity: 0;
+        -webkit-animation-timing-function: linear;
+    }
+
+    94.332% {
+        -webkit-transform: translate3d(0, 0, 0);
+        opacity: 1;
+        -webkit-animation-timing-function: linear;
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        opacity: 0;
+        -webkit-animation-timing-function: linear;
+    }
+}
+
+    -webkit-animation-duration: 1.113s;
+    -webkit-animation-delay: 0;
+=======================================================
+
+4.元のCSSアニメーションである@～～の部分で置き換え、もともとあった以下の2行も書き換えます。
+    -webkit-animation-duration: 1.113s;
+    -webkit-animation-delay: 0;
+
+5.「0%」の部分を最初の～%をコピーしたものを追加することで完了。
+
+=======================================================
+@-webkit-keyframes AN-ani-12079 {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        opacity: 0;
+        -webkit-animation-timing-function: linear;
+    }
+
+    83.407% {
+        -webkit-transform: translate3d(0, 0, 0);
+        opacity: 0;
+        -webkit-animation-timing-function: linear;
+    }
+=======================================================
+=======================================================
+
